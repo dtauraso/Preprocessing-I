@@ -16,7 +16,8 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, video
+{
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -26,44 +27,138 @@ time, mark, audio, video {
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+footer, header, hgroup, menu, nav, section
+{
 	display: block;
 }
-body {
+body
+{
 	line-height: 1;
 }
-ol, ul {
+ol, ul
+{
 	// list-style: none;
 }
-blockquote, q {
+blockquote, q
+{
 	quotes: none;
 }
 blockquote:before, blockquote:after,
-q:before, q:after {
+q:before, q:after
+{
 	content: '';
 	content: none;
 }
-table {
+table
+{
 	border-collapse: collapse;
 	border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
-* {
+*
+{
     box-sizing: border-box;
 }
 
-html, body {
+html, body
+{
 	height: 100%;
 	// background-color: red;
 }
 
-.myClass
+// variables
+// @h1Colo ;
+// @h3Color ;
+// mixins
+.TableTemplate
 {
+	width: 70%;
 	border: 1px solid black;
-	.myNestedClass
-	{
-		display: flex;
-	}
+	border-collapse: collapse;
+	padding: 15px;
+
+}
+.FlexTemplate(@direction)
+{
+	display: flex;
+	flex-direction: @direction;
+
 }
 
+.ResumeContent
+{
+	width: 900px;
+}
+
+.NavBar
+{
+	.FlexTemplate(row);
+	justify-content: space-between;
+	padding: 0% 20%;
+}
+.category
+{
+	//text-align: center;
+	.FlexTemplate(column);
+	h2
+	{
+		text-align: center;
+		margin: 3% 0%;
+		
+	}
+	p
+	{
+		width: 70%;
+		margin: 0 auto;
+	}
+	h3, h4
+	{
+		text-align: center;
+	}
+	ul
+	{
+		width: 75%;
+		margin: 0 auto;	
+		li
+		{
+			margin: 2% 0;
+		}
+	}
+	
+}
+#contact
+{
+	width: 70%;
+	text-align: left;
+	margin: 5% auto 2% auto;
+}
+table
+{
+	.TableTemplate();
+	// border-spacing: 45px;
+
+
+	th
+	{
+		.TableTemplate();
+		text-align: left;
+	}
+	tr:nth-child(even)
+	{
+		background-color: #dddddd;
+
+	}
+	td
+	{
+		.TableTemplate();
+		text-align: left;
+
+
+	}
+}
+.ProgrammingLanguages
+{
+	display: flex;
+	justify-content: center;
+}
