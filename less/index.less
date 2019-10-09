@@ -64,12 +64,16 @@ table
 html, body
 {
 	height: 100%;
+	font-size: @default_font;
 	// background-color: red;
 }
 
 // variables
-// @h1Colo ;
-// @h3Color ;
+@default_font = 62.5%;
+@default_font_double = 2rem;
+@slight_red = rgb(167, 53, 53);
+@slight_gray = #dddddd;
+
 // mixins
 .TableTemplate
 {
@@ -89,13 +93,29 @@ html, body
 .ResumeContent
 {
 	width: 900px;
+	margin: 0 auto;
+
+	@media (max-width: 500px)
+	{
+		width: 500px;
+		margin: 0 auto;
+	
+	}
+
 }
 
 .NavBar
 {
 	.FlexTemplate(row);
 	justify-content: space-between;
-	padding: 0% 20%;
+	padding: 0% 15%;
+	a
+	{
+		text-decoration: none;
+		color: black;
+		font-size: 1.6rem;
+
+	}
 }
 .category
 {
@@ -105,16 +125,25 @@ html, body
 	{
 		text-align: center;
 		margin: 3% 0%;
-		
+		color: @slight_red;
+		font-size: @default_font_double;
+
 	}
 	p
 	{
 		width: 70%;
 		margin: 0 auto;
+		font-size: 1.5rem;
+		line-height: 1.5;
+
 	}
-	h3, h4
+	h3
 	{
-		text-align: center;
+		width: 70%;
+		margin: 0 auto;
+
+		text-align: left;
+		font-size: @default_font_double;
 	}
 	ul
 	{
@@ -123,6 +152,8 @@ html, body
 		li
 		{
 			margin: 2% 0;
+			font-size: 1.5rem;
+			line-height:  1;
 		}
 	}
 	
@@ -137,6 +168,7 @@ table
 {
 	.TableTemplate();
 	// border-spacing: 45px;
+	font-size: 1.5rem;
 
 
 	th
@@ -146,7 +178,7 @@ table
 	}
 	tr:nth-child(even)
 	{
-		background-color: #dddddd;
+		background-color: @slight_gray;
 
 	}
 	td
@@ -157,8 +189,16 @@ table
 
 	}
 }
-.ProgrammingLanguages
+.Skills
 {
 	display: flex;
 	justify-content: center;
+
+}
+.ProgrammingLanguages
+{
+	margin-top: 5%;
+	display: flex;
+	justify-content: center;
+	
 }
