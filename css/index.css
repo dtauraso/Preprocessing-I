@@ -149,11 +149,23 @@ body {
   flex-direction: row;
   justify-content: space-between;
   padding: 0% 15%;
+  margin-top: 2%;
+}
+@media (max-width: 500px) {
+  .NavBar {
+    flex-direction: column;
+    text-align: right;
+  }
 }
 .NavBar a {
   text-decoration: none;
   color: black;
   font-size: 1.6rem;
+}
+@media (max-width: 500px) {
+  .NavBar a {
+    margin: 2% 0;
+  }
 }
 .category {
   display: flex;

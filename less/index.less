@@ -73,7 +73,7 @@ html, body
 @default_font_double: 2rem;
 @slight_red: rgb(167, 53, 53);
 @slight_gray: #dddddd;
-
+@mobile: 500px;
 // mixins
 .TableTemplate
 {
@@ -95,12 +95,13 @@ html, body
 	width: 900px;
 	margin: 0 auto;
 
-	@media (max-width: 500px)
+	@media (max-width: @mobile)
 	{
 		width: 500px;
 		margin: 0 auto;
 	
 	}
+
 
 }
 
@@ -109,11 +110,22 @@ html, body
 	.FlexTemplate(row);
 	justify-content: space-between;
 	padding: 0% 15%;
+	margin-top: 2%;
+	// make this verticle for mvp
+	@media (max-width: @mobile)
+	{
+		flex-direction: column;
+		text-align: right;
+	}
 	a
 	{
 		text-decoration: none;
 		color: black;
 		font-size: 1.6rem;
+		@media (max-width: @mobile)
+		{
+			margin: 2% 0;
+		}
 
 	}
 }
