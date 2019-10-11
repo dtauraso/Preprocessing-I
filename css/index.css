@@ -1,1 +1,238 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  font-size: 62.5%;
+}
+.TableTemplate {
+  width: 70%;
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 15px;
+}
+.ResumeContent {
+  width: 900px;
+  margin: 0 auto;
+}
+@media (max-width: 500px) {
+  .ResumeContent {
+    width: 500px;
+    margin: 0 auto;
+  }
+}
+.NavBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0% 15%;
+  margin-top: 2%;
+}
+@media (max-width: 500px) {
+  .NavBar {
+    flex-direction: column;
+    text-align: right;
+  }
+}
+.NavBar a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.6rem;
+}
+@media (max-width: 500px) {
+  .NavBar a {
+    margin: 2% 0;
+  }
+}
+.category {
+  display: flex;
+  flex-direction: column;
+}
+.category h2 {
+  text-align: center;
+  margin: 3% 0%;
+  color: #a73535;
+  font-size: 2rem;
+}
+.category p {
+  width: 70%;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+.category h3 {
+  width: 70%;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 2rem;
+}
+.category ul {
+  width: 75%;
+  margin: 0 auto;
+}
+.category ul li {
+  margin: 2% 0;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+#contact {
+  width: 70%;
+  text-align: left;
+  margin: 5% auto 2% auto;
+}
+table {
+  width: 70%;
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 15px;
+  font-size: 1.5rem;
+}
+table th {
+  width: 70%;
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 15px;
+  text-align: left;
+}
+table tr:nth-child(even) {
+  background-color: #dddddd;
+}
+table td {
+  width: 70%;
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 15px;
+  text-align: left;
+}
+.Skills {
+  display: flex;
+  justify-content: center;
+}
+.ProgrammingLanguages {
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+}
